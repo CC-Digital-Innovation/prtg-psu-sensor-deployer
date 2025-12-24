@@ -1,6 +1,6 @@
 # Deploy PSU Sensors to Arista and Palo Alto Devices
 # Auto-detects PSU count per device and creates sensors for all found
-# https://github.com/YOUR_USERNAME/prtg-psu-sensor-deployer
+# https://github.com/CC-Digital-Innovation/prtg-psu-sensor-deployer
 
 param(
     [Parameter(Mandatory=$true)]

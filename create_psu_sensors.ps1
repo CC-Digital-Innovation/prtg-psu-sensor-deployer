@@ -1,6 +1,6 @@
 # Create PSU Sensors using PrtgAPI
 # Single-device deployment script
-# https://github.com/YOUR_USERNAME/prtg-psu-sensor-deployer
+# https://github.com/CC-Digital-Innovation/prtg-psu-sensor-deployer
 
 param(
     [Parameter(Mandatory=$true)]
