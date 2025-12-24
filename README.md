@@ -44,9 +44,7 @@ Automated Power Supply Unit (PSU) health monitoring sensor deployment for PRTG N
    C:\Program Files (x86)\PRTG Network Monitor\snmplibs\
    ```
 
-   **Important:** The OIDLIB must be installed on:
-   - The PRTG core server
-   - Each remote probe that monitors Arista/Palo Alto devices
+   **Note:** The OIDLIB only needs to be installed on the PRTG core server, not on remote probes.
 
    After copying, reload the libraries using one of these methods:
    - **PRTG Web UI:** Setup > Administrative Tools > Load Lookups and File Lists
@@ -109,7 +107,7 @@ Automated Power Supply Unit (PSU) health monitoring sensor deployment for PRTG N
 | Vendor | Models Tested | Notes |
 |--------|---------------|-------|
 | Arista | 7050, 7280, 7500 series | Excludes C-260/O-235 APs |
-| Palo Alto | PA-5220, PA-5250 | Excludes Panorama; PA-440/PA-820 may require SNMP config |
+| Palo Alto | PA-5220, PA-5250 | Excludes Panorama |
 
 ## SNMP Library Sensor Notes
 
@@ -162,10 +160,9 @@ $PrtgConfig = @{
 ### Device times out during SNMP discovery
 - Verify SNMP credentials are configured on the device in PRTG
 - Check that the device supports ENTITY-STATE-MIB
-- Smaller Palo Alto models (PA-440, PA-820) may not support this MIB
 
 ### No PSU targets found
-- Ensure the `Arista & PA Hardware State.oidlib` file is installed on your PRTG probes
+- Ensure the `Arista & PA Hardware State.oidlib` file is installed on your PRTG core server
 - Verify the device has SNMP enabled and accessible
 
 ### Sensor creation fails
