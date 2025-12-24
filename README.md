@@ -11,6 +11,16 @@ Automated Power Supply Unit (PSU) health monitoring sensor deployment for PRTG N
 - Skips devices that already have PSU sensors
 - Supports multiple PRTG servers
 
+## Screenshots
+
+### Device Overview
+![Device Overview](images/device-overview.png)
+*PSU sensors displayed alongside other device sensors*
+
+### Sensor Detail
+![Sensor Detail](images/sensor-detail.png)
+*Individual PSU sensor showing "enabled" status with uptime statistics*
+
 ## Requirements
 
 - PowerShell 5.1 or later
