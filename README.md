@@ -27,7 +27,7 @@ Automated Power Supply Unit (PSU) health monitoring sensor deployment for PRTG N
 
 2. Clone this repository:
    ```powershell
-   git clone https://github.com/YOUR_USERNAME/prtg-psu-sensor-deployer.git
+   git clone https://github.com/CC-Digital-Innovation/prtg-psu-sensor-deployer.git
    cd prtg-psu-sensor-deployer
    ```
 
@@ -36,6 +36,21 @@ Automated Power Supply Unit (PSU) health monitoring sensor deployment for PRTG N
    Copy-Item config.sample.ps1 config.ps1
    # Edit config.ps1 with your PRTG server details
    ```
+
+4. Install the OIDLIB file on your PRTG server(s):
+
+   Copy `Arista & PA Hardware State.oidlib` to the SNMP library folder:
+   ```
+   C:\Program Files (x86)\PRTG Network Monitor\snmplibs\
+   ```
+
+   **Important:** The OIDLIB must be installed on:
+   - The PRTG core server
+   - Each remote probe that monitors Arista/Palo Alto devices
+
+   After copying, reload the libraries using one of these methods:
+   - **PRTG Web UI:** Setup > Administrative Tools > Load Lookups and File Lists
+   - **Or** restart the PRTG Probe Service
 
 ## Usage
 
