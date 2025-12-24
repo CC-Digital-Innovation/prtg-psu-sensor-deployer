@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+  <ValueLookup id="oid.entity-state-mib.entstate.entstateoper" desiredValue="1" undefinedState="Warning" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PaeValueLookup.xsd">
+    <Lookups>
+      <SingleInt state="Error" value="1">
+        unknown
+      </SingleInt>
+      <SingleInt state="Error" value="2">
+        disabled
+      </SingleInt>
+      <SingleInt state="OK" value="3">
+        enabled
+      </SingleInt>
+      <SingleInt state="Warning" value="4">
+        testing
+      </SingleInt>
+    </Lookups>
+  </ValueLookup>

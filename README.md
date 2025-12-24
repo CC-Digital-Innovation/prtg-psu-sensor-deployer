@@ -52,6 +52,26 @@ Automated Power Supply Unit (PSU) health monitoring sensor deployment for PRTG N
    - **PRTG Web UI:** Setup > Administrative Tools > Load Lookups and File Lists
    - **Or** restart the PRTG Probe Service
 
+5. **(Recommended)** Install the lookup file for proper alert levels:
+
+   Copy `oid.entity-state-mib.entstate.entstateoper.ovl` to the custom lookups folder:
+   ```
+   C:\Program Files (x86)\PRTG Network Monitor\lookups\custom\
+   ```
+
+   Then reload lookups via **Setup > Administrative Tools > Load Lookups and File Lists**.
+
+   This lookup file controls how PRTG displays and alerts on PSU states. The default alert levels are:
+
+   | Value | State | Default Alert Level |
+   |-------|-------|---------------------|
+   | 1 | unknown | Error |
+   | 2 | disabled | Error |
+   | 3 | enabled | OK (None) |
+   | 4 | testing | Warning |
+
+   **Note:** You can customize these alert levels by editing the `.ovl` file. Change the `state` attribute to `None`, `Warning`, or `Error` based on your monitoring requirements.
+
 ## Usage
 
 ### Test Run (WhatIf Mode)
