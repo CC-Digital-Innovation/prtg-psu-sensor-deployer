@@ -1,0 +1,17 @@
+# Config file with credentials
+config.ps1
+
+# Deployment reports (contain device names/IPs)
+*.csv
+
+# Temporary files
+*.txt
+*.tmp
+*.log
+
+# Internal reference docs
+*.md
+!README.md
+
+# PowerShell temp files
+*.ps1.bak
